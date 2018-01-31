@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_Light_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ikP-UM-87X">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="XoZ-ZG-b5p">
+                                <rect key="frame" x="16" y="20" width="288" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="W6o-Uc-1va"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xR-p3-BhJ">
+                                <rect key="frame" x="16" y="182" width="288" height="184"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="90"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDs-Ss-bgN">
+                                <rect key="frame" x="77" y="382" width="166" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IDs-Ss-bgN" secondAttribute="height" multiplier="1:1" id="p58-o8-osh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <state key="normal" title="Start" backgroundImage="stopButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eyg-TP-ckx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XoZ-ZG-b5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="18C-Oz-DBS"/>
+                            <constraint firstItem="XoZ-ZG-b5p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Yd-8a-sJU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7xR-p3-BhJ" secondAttribute="trailing" constant="16" id="5c1-ur-YUA"/>
+                            <constraint firstItem="IDs-Ss-bgN" firstAttribute="top" secondItem="7xR-p3-BhJ" secondAttribute="bottom" constant="16" id="Buq-yL-RVU"/>
+                            <constraint firstAttribute="bottom" secondItem="ikP-UM-87X" secondAttribute="bottom" id="GR5-jm-N6t"/>
+                            <constraint firstItem="IDs-Ss-bgN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="WFe-u9-4iq"/>
+                            <constraint firstItem="ikP-UM-87X" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZAI-v4-erX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IDs-Ss-bgN" secondAttribute="bottom" constant="20" id="eJ2-3N-Oqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IDs-Ss-bgN" secondAttribute="trailing" constant="77" id="edU-xQ-KTJ"/>
+                            <constraint firstItem="7xR-p3-BhJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hzb-Kv-Ibe"/>
+                            <constraint firstItem="7xR-p3-BhJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="162" id="iGT-Xy-zuK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XoZ-ZG-b5p" secondAttribute="trailing" constant="16" id="l0g-Tv-6aC"/>
+                            <constraint firstItem="ikP-UM-87X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wv3-eC-pf0"/>
+                            <constraint firstItem="ikP-UM-87X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="x5Z-J1-Azy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="7xR-p3-BhJ" id="k81-bm-DBC"/>
+                        <outlet property="startButton" destination="IDs-Ss-bgN" id="LNP-bZ-HmP"/>
+                        <outlet property="trafficImage" destination="XoZ-ZG-b5p" id="vjC-Pi-XdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="132.04225352112675"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1600" height="900"/>
+        <image name="stopButton" width="1000" height="1000"/>
+        <image name="trafficLight" width="1500" height="600"/>
+    </resources>
+</document>
